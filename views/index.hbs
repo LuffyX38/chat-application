@@ -1,0 +1,114 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat room</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+     <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="container">
+      <h1 class="text-center mb-4">Create Room</h1>
+      <h6 class="text-center" id="roomid"></h6>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <form id="joiningRoom" style="display: block;">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">🪪</span>
+                  <input type="text" class="form-control" placeholder="Room id" aria-label="Username" aria-describedby="basic-addon1" id="joiningInfo" disabled>
+                </div>
+                
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary btn-sm" id="gri">Generate room id</button>
+                </div>
+                  <br>
+                <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon1">join</button>
+                    <input type="text" class="form-control" aria-label="Example text with button addon" aria-describedby="button-addon1" placeholder="Room id here" id="dt">
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+    {{!--  --}}
+     <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="container">
+      <h1 class="text-center mb-4">Chat Room</h1>
+      <h6 class="text-center" id="roomid"></h6>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <form id="form" style="display: block;">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">✉️</span>
+                  <input type="text" class="form-control" placeholder="Message" aria-label="Username" aria-describedby="basic-addon1" id="message" dis>
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">👤</span>
+                  <input type="text" class="form-control" placeholder="username/room id" aria-label="Username" aria-describedby="basic-addon1" id="userid">
+                </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary btn-sm" type="submit">Send Message</button>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+    <h6 class="text-center" id="connectionsRoom"></h6>
+    <h6 class="text-center" id="connections"></h6>
+     <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="container">
+      {{!-- <h6 class="text-center" id="roomid"></h6> --}}
+      <div class="row justify-content-center">
+              
+
+        <div class="col-md-6">
+          <div class="card">
+           
+            <div class="card-body" id="messagesHere">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"
+    ></script>
+
+    <script src="webchat.js">
+      
+    </script>
+  </body>
+</html>
